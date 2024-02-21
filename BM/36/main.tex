@@ -71,16 +71,16 @@ at $x=0$. As $t \rightarrow \infty$, the population size of bacteria asymptotica
 \input{tables/parameters.tex}
 The growth equation is given by,
 \begin{align}
-    &\frac{dx}{dt}=x\brak{1-\frac{x}{200}} \\
-    \implies &{dx\brak{t}}{dt}=\frac{1}{200}x\brak{200-x} \\
-    \implies &\frac{1}{200}\brak{\int_{0}^{x\brak{t}}\frac{dx}{200-x}+\int_{0}^{x\brak{t}}\frac{dx}{x}}=\int_{0}^{t}\frac{dt}{200} \\
-    \implies &-\ln{\brak{200-x}}|_{100}^{x\brak{t}}+\ln{\brak{x}}|_{100}^{x\brak{t}}=t \\
-	\implies &\frac{x\brak{t}}{200-x\brak{t}}=e^t \\
-    \implies &x\brak{t}=\frac{200}{1+e^{-t}}
+	\frac{dx}{dt}&=x\brak{1-\frac{x}{200}} \\
+	{dx\brak{t}}{dt}&=\frac{1}{200}x\brak{200-x} \\
+	\frac{1}{200}\brak{\int_{0}^{x\brak{t}}\frac{dx}{200-x}+\int_{0}^{x\brak{t}}\frac{dx}{x}}&=\int_{0}^{t}\frac{dt}{200} \\
+	-\ln{\brak{200-x}}|_{100}^{x\brak{t}}+\ln{\brak{x}}|_{100}^{x\brak{t}}&=t \\
+	\frac{x\brak{t}}{200-x\brak{t}}&=e^t \\
+	\implies x\brak{t}&=\frac{200}{1+e^{-t}}
 \end{align}
 We can also express the growth equation as,
 \begin{align}
-    \implies &\int_{0}^{x\brak{t}}dx=\int_{0}^{t}xdt-\frac{1}{200}\int_{0}^{t}x^2dt
+    \int_{0}^{x\brak{t}}dx=\int_{0}^{t}xdt-\frac{1}{200}\int_{0}^{t}x^2dt
 \end{align}
 Now approximating by trapezoidal rule of integration between $t_{n-1}$ to $t_n$ with the step size being $h$ we have,
 \begin{align}
@@ -109,7 +109,7 @@ Now, plotting both the differential and the difference equations,
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{figs/diff.png}
-    \caption{Approximation in Discrete-Time}
+    \caption{Plot in Continuous and Discrete Time}
 \end{figure}
 \newline
 As we can see the discrete time plot is following the actual curve, which means \eqref{eq:A} is indeed a good approximation of the original continuous-time equation.

@@ -49,6 +49,5 @@ plt.plot(t_discrete, x_discrete, 'o', label=f'Discrete, h={h}')
 plt.xlabel('$t$')
 plt.ylabel('$x(t)$')
 plt.legend()
-plt.title('Continuous and Discrete Solutions for h=0.1')
 plt.show()
 

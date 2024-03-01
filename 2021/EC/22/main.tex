@@ -66,9 +66,32 @@ Consider a carrier signal which is amplitude modulated by a single-tone sinusoid
 \input{tables/parameters.tex}
 The percentage modulation,
 \begin{align}
-    m&=50\% \\
-    &=0.5
+    m=50\%=0.5
 \end{align}
+Suppose, we have the carrier signal as,
+\begin{align}
+    x_c\brak{t}=A_c\sin{2\pi f_ct}
+\end{align}
+So the message signal,
+\begin{align}
+    x_m\brak{t}=mA_c\sin{2\pi f_mt}
+\end{align}
+And the modulated signal,
+\begin{align}
+    y\brak{t}=A_c\brak{1+m\sin{2\pi f_mt}}\sin{2\pi f_ct}
+\end{align}
+Now the modulated signal in the frequency domain looks like,
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/Modulated.png}
+    \caption{Modulated Signal}
+\end{figure}
+After the carrier signal and one of the side bands are removed,
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/Suppressed.png}
+    \caption{Suppressed Signal}
+\end{figure}
 The total power is due to the carrier and the two sidebands,
 \begin{align}
     P_t=P_c\sbrak{1+\frac{m^2}{2}}
